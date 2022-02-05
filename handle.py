@@ -1,6 +1,10 @@
 def get_age():
     print("How old are you?")
-    age = int(input())
-    return age
+    
+    try:
+        age = int(input())
+        return age
+    except ValueError:
+        return "That was not a valid input"
 
 print (get_age())
